@@ -157,7 +157,6 @@ const data = [
 
 */
 
-// const articleDiv = document.querySelector('.articles')
 
 function componentCreator(dataObject) {
   const {
@@ -181,6 +180,7 @@ function componentCreator(dataObject) {
   articleDiv.appendChild(paragraph1)
   articleDiv.appendChild(paragraph2)
   articleDiv.appendChild(paragraph3)
+  articleDiv.appendChild(button)
 
   articleDiv.classList.add('article')
   articleDate.classList.add('date')
@@ -191,13 +191,14 @@ function componentCreator(dataObject) {
   paragraph1.textContent = firstParagraph
   paragraph2.textContent = secondParagraph
   paragraph3.textContent = thirdParagraph
+  button.textContent = 'Click Me'
 
 
   button.addEventListener('click', event => {
     articleDiv.classList.toggle('article-open')
   })
 
-  // console.log(paragraph1)
+  console.log(button)
 
   return articleDiv
 
